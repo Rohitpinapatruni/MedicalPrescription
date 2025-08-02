@@ -18,7 +18,7 @@ if st.button("Analyze Prescription"):
     }
 
     with st.spinner("Analyzing with Gemini AI..."):
-        res = requests.post("http://localhost:8000/analyze", json=payload)
+        res = requests.post("https://medicalprescription.onrender.com/analyze", json=payload)
         if res.status_code == 200:
             data = res.json()
             st.subheader("🧬 Extracted Drugs")
